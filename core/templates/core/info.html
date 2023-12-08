@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        p {
+            color: #555;
+            text-align: center;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        .features {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .feature {
+            flex: 0 0 50%;
+            padding: 20px;
+            text-align: center;
+        }
+
+        a {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Фатхиев Динар Айдарович
+    </h1>
+    <p>
+        "DinFat" - это проект, который ставит своей целью обеспечить удобство и доступность онлайн-покупок для пенсионеров, проживающих в деревне. Из-за того, что для многих старших граждан поход в магазин становится сложной задачей из-за старости и здоровья. Проект призван решить эту проблему, предлагая следующее:
+    </p>
+
+    <div class="features">
+        <div class="feature">
+            <h2>Онлайн-Каталог с Легким Интерфейсом</h2>
+            <p>Простой и понятный онлайн-каталог, чтобы сделать покупки максимально удобными для каждого клиента.</p>
+        </div>
+        <div class="feature">
+            <h2>Доставка Продуктов Прямо к Двери</h2>
+            <p>Возможность заказать удобную доставку продуктов прямо к дому клиента.</p>
+        </div>
+    </div>
+ <p align="center">
+        <a href="{% url 'homepage' %}">Назад</a>
+    </p>
+
+</body>
+</html>
