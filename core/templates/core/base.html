@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Default Title{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'core/css/syles.css' %}">
+    {% block styles %}{% endblock %}
+</head>
+<body>
+    <div class="sidenav">
+        <a href="{% url 'homepage' %}">Главное</a>
+        <a href="{% url 'info' %}">Информация</a>
+        <a href="{% url 'products' %}">Продукты</a>
+        <a href="{% url 'orders' %}">Заказы</a>
+        <a href="{% url 'categories' %}">Категория</a>
+        <a href="{% url 'admin:index' %}">Админка</a>
+
+    </div>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+</body>
+</html>

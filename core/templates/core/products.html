@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+  <h1>Список продуктов</h1>
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Наименование</th>
+        <th>Описание</th>
+        <th>Цена</th>
+        <th>Доступное количество</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for product in products %}
+        <tr>
+          <td>{{ product.name }}</td>
+          <td>{{ product.description }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.available_quantity }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}

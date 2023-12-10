@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Категория {% endblock %}
+
+{% block content %}
+  <div>
+    <h1>Категория продуктов</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Название</th>
+          <th>Описание</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for category in categories %}
+          <tr>
+            <td>{{ category.name }}</td>
+            <td>{{ category.description }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}

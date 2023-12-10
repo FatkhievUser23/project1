@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+  <div class="table-container">
+    <h1>Список заказов</h1>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Клиент</th>
+          <th>Общая стоимость</th>
+          <th>Дата создания</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for order in orders %}
+          <tr>
+            <td>{{ order.user.username }}</td>
+            <td>{{ order.total_price }}</td>
+            <td>{{ order.date_created }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
